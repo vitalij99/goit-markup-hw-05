@@ -196,6 +196,8 @@ nav {
     border-radius: 4px;
     padding: 10px 32px;
     border-width: 0;
+
+    transition: background-color var(--time-animation);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -326,6 +328,8 @@ nav {
     border-radius: 50%;
     background-color: var(--white-color);
     fill: var(--icon);
+    
+    transition: background-color var(--time-animation), fill var(--time-animation);
 }
 .social-icon-bg:hover,.social-icon-bg:focus {
     background-color: var(--active-bg-color);
@@ -348,6 +352,7 @@ nav {
 }
 .client {
     fill: var(--icon);
+    transition:  border-color var(--time-animation),fill var(--time-animation);
 }
 .client:hover, .client:focus   {
     border-color: var(--active-bg-color);
@@ -377,13 +382,9 @@ footer .logo {
     color: var(--white-color)
 }
 .fotter-text {
-    text-decoration: none;
     color: var(--white-color)
 }
-.fotter-text:hover,
-.fotter-text:focus {
-    color: var(--active-bg-color);
-}
+
 footer .mail {
     color: var(--footer-color-a);
 }
@@ -439,9 +440,9 @@ footer .mail {
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    
-    transition: transform var(--time-animation);
     transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--time-animation), box-shadow var(--time-animation);
+    
 }
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(1.5);
@@ -475,6 +476,7 @@ footer .mail {
     border-color: var(--another-white);
     border-width: 0;
     padding: 6px 22px;
+    transition: background-color var(--time-animation),color var(--time-animation), box-shadow var(--time-animation);
 }
 
 .filters button:hover,
@@ -491,10 +493,11 @@ footer .mail {
 }
 .portfolio-box {
     text-decoration: none;
+    display: block;
+    transition: box-shadow var(--time-animation);
 }
 .portfolio-box:hover,
 .portfolio-box:focus {
-    display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -521,7 +524,7 @@ footer .mail {
 }
 
 .portfolio-box:hover .portfolio-text,
-.portfolio-box:focus {
+.portfolio-box:focus .portfolio-text {
     transform: translateY(0);
 }
 .portfolio .text {
